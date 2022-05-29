@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
+   
+   <script src="https://unpkg.com/video.js/dist/video.js"></script>
+   
+   <script src="https://unpkg.com/videojs-contrib-hls/dist/videojs-contrib-hls.js"></script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Responsive Video Playlist Tutorial</title>
+   <title>LiveTV Playlist</title>
 
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
@@ -15,56 +20,78 @@
 <div class="container">
 
    <div class="main-video-container">
-      <video src="images/vid-1.mp4" loop controls class="main-video"></video>
-      <h3 class="main-vid-title">house flood animation</h3>
+      <video id="starsphi" class="video-js vjs-fluid vjs-default-skin" controls  autoplay = "false"
+               data-setup='{}'>
+             <source src="https://prod-ec-us-east-1.video.pscp.tv/Transcoding/v1/hls/JuQT6pRFvuzu07P0xzKYgcevUf1U3Wx7_zgDBE3tE95F2SWuvosO52RbhSWdGxJa0AOk7TC5slq9o23pPfDAIA/non_transcode/eu-central-1/periscope-replay-direct-prod-eu-central-1-public/tw_master_dynamic_highlatency.m3u8?type=live" type="application/x-mpegURL" autoplay = "false">
+      </video>
+      <script>
+         var player = videojs('starsphi');
+         player.play();
+      </script>
+      <h3 class="main-vid-title">Star Sports Hindi</h3>
    </div>
 
    <div class="video-list-container">
 
       <div class="list active">
-         <video src="images/vid-1.mp4" class="list-video"></video>
-         <h3 class="list-title">house flood animation</h3>
+        <video id="foxcric" class="video-js vjs-fluid vjs-default-skin" controls  autoplay = "false"
+                 data-setup='{}'>
+               <source src="https://vkvsd70.mycdn.me/hls/2318208535041.m3u8/sig/6qz91rcHa-8/srcIp/157.35.48.228/expires/1654263383229/clientType/13/srcAg/CHROME_ANDROID/fromCache/1/mid/3257980037889/id/2318208535041/video.m3u8?p" type="application/x-mpegURL" autoplay = "false">
+         </video>
+           <h3 class="list-title">Fox Cricket</h3>
+         <script>
+            var player = videojs('foxcric');
+            player.play();
+         </script>
       </div>
 
       <div class="list">
-         <video src="images/vid-2.mp4" class="list-video"></video>
-         <h3 class="list-title">zoombie walking animation</h3>
+         <video id="tsports" class="video-js vjs-fluid vjs-default-skin" controls  autoplay = "false"
+           data-setup='{}'>
+             <source src="http://103.136.200.246:8082/T-Sports/index.m3u8" type="application/x-mpegURL" autoplay = "false">
+         </video>
+        
+      <script>
+         var player = videojs('tsports');
+         player.play();
+      </script>
+         <h3 class="list-title">T Sports</h3>
       </div>
 
       <div class="list">
-         <video src="images/vid-3.mp4" class="list-video"></video>
-         <h3 class="list-title">emoji falling animation</h3>
+         <video id="stsp2" class="video-js vjs-fluid vjs-default-skin" controls  autoplay = "false"
+                  data-setup='{}'>
+                <source src="http://103.55.144.46/hls/starsports2.m3u8" type="application/x-mpegURL" autoplay = "false">
+         </video>
+           
+         <script>
+            var player = videojs('stsp2');
+            player.play();
+         </script>
+         <h3 class="list-title">Star Sports 2</h3>
       </div>
 
       <div class="list">
-         <video src="images/vid-4.mp4" class="list-video"></video>
-         <h3 class="list-title">3D town animation</h3>
+         <video id="gazi" class="video-js vjs-fluid vjs-default-skin" controls  autoplay = "false"
+                  data-setup='{}'>
+                <source src="http://103.136.200.246:8082/Gazi-Tv/index.m3u8" type="application/x-mpegURL" autoplay = "false">
+         </video>
+           
+         <script>
+            var player = videojs('gazi');
+            player.play();
+         </script>
+         <h3 class="list-title">Gazi TV - IPL SD</h3>
       </div>
 
       <div class="list">
-         <video src="images/vid-5.mp4" class="list-video"></video>
-         <h3 class="list-title">man chasing carrot animation</h3>
+         <iframe src = "https://castfree.me/embed.php?player=desktop&live=starhindi" autoplay = "false"></iframe>
+           
+         
+         <h3 class="list-title">Star Sports Hindi SD</h3>
       </div>
 
-      <div class="list">
-         <video src="images/vid-6.mp4" class="list-video"></video>
-         <h3 class="list-title">door hinge animation</h3>
-      </div>
-
-      <div class="list">
-         <video src="images/vid-7.mp4" class="list-video"></video>
-         <h3 class="list-title">poeple walking in town animation</h3>
-      </div>
-
-      <div class="list">
-         <video src="images/vid-8.mp4" class="list-video"></video>
-         <h3 class="list-title">knight chasing virus animation</h3>
-      </div>
-
-      <div class="list">
-         <video src="images/vid-9.mp4" class="list-video"></video>
-         <h3 class="list-title">3D helicopter animation</h3>
-      </div>
+      
 
    </div>
 
